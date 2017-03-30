@@ -56,7 +56,7 @@ class AdwordsDataFetch < ApplicationJob
                 developer_token = configuration.developer_token
                 issued_at = hash['issued_at']
                 expires_in = hash['expires_in']
-                DspAdwordsConfiguration.where(:developer_token => developer_token)
+                AdwordsAccountDetails.where(:developer_token => developer_token)
                                        .update_all("access_token = '#{access_token}',
                                        refresh_token = '#{referesh_token}', expires_in = '#{expires_in}',
                                        issued_at = '#{issued_at}' ")
