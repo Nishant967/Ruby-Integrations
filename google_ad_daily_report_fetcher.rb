@@ -1,6 +1,6 @@
 # Here I am taking adwords client configurations and other details from database to import campaign data from adwords for today.
 
-class AdwordsDataFetch < ApplicationJob
+class GoogleAdDailyReportFetcher < ApplicationJob
 
      require 'adwords_api'
      require 'openssl'
